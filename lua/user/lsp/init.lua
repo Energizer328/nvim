@@ -14,4 +14,5 @@ end
 mason.setup()
 mason_lspconfig.setup()
 require "user.lsp.settings.sumneko_lua"
+require "user.lsp.settings.rust_tools"
 

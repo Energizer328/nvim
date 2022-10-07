@@ -33,13 +33,23 @@ local options = {
   linebreak = true,
   scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
-  guifont = "MesloLGS NF:h10",               -- the font used in graphical neovim applications
+  guifont = "MesloLGS NF:h12",               -- the font used in graphical neovim applications
   termguicolors = true,
 };
 
 vim.opt.shortmess:append "c"
 
+local globals = {
+  rustfmt_autosave = 1,
+  neovide_fullscreen = false,
+  neovide_remember_window_size = true,
+}
+
 for k, v in pairs(options) do
   vim.opt[k] = v
+end
+
+for k, v in pairs(globals) do
+  vim.g[k] = v
 end
 

@@ -57,11 +57,10 @@ return packer.startup(function(use)
   use "rafamadriz/friendly-snippets" -- some snippets
 
   -- LSPs
-  use {
-    "williamboman/mason.nvim", -- simple to use language server installer
-    "williamboman/mason-lspconfig.nvim", -- recommended by mason.nvim
-    "neovim/nvim-lspconfig", -- enable LSP
-  }
+  use "williamboman/mason.nvim" -- simple to use language server installer
+  use "williamboman/mason-lspconfig.nvim" -- recommended by mason.nvim
+  use "neovim/nvim-lspconfig" -- enable LSP
+  use "simrat39/rust-tools.nvim" -- setup rust analyzer
   use 'mfussenegger/nvim-dap' -- debug adapter protocol client (recommended by mason.nvim)
   use 'mfussenegger/nvim-lint' -- asynchronous linter (recommended by mason.nvim)
   use 'mhartington/formatter.nvim' -- asynchronous formatter (recommended by mason.nvim)
@@ -90,6 +89,9 @@ return packer.startup(function(use)
 
   -- Comments
   use "numToStr/Comment.nvim"
+
+  -- Rust
+  use "rust-lang/rust.vim"
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
