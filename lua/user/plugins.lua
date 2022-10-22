@@ -93,6 +93,9 @@ return packer.startup(function(use)
   -- Rust
   use "rust-lang/rust.vim"
 
+  -- Flutter
+  use "akinsho/flutter-tools.nvim"
+
   if PACKER_BOOTSTRAP then
     require("packer").sync()
   end
