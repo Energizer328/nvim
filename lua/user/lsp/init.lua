@@ -1,4 +1,3 @@
-
 local mason_ok, mason = pcall(require, "mason")
 if not mason_ok then
   vim.notify "could not load module mason.nvim"
@@ -16,4 +15,3 @@ mason_lspconfig.setup()
 require "user.lsp.settings.lua"
 require "user.lsp.settings.rust"
 require "user.lsp.settings.flutter"
-
