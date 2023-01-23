@@ -1,11 +1,10 @@
-
 local ok, config = pcall(require, "nvim-treesitter.configs")
 if not ok then
   vim.notify "error loading treesitter"
 end
 
 config.setup {
-  ensure_installed = "all", -- list of parsers to install, or "all"
+  ensure_installed = { "lua", "dart", "go", "terraform" }, -- list of parsers to install, or "all"
   sync_installed = false, -- install parsers synchronously
   auto_install = true, -- automatically install missing parsers when entering buffer
   ignore_install = {}, -- list of parsers to ignore installing
@@ -18,7 +17,7 @@ config.setup {
   },
 
   -- provides indentation
-  indent = {enable = true},
+  indent = { enable = true },
 
   -- provides rainbow parantheses
   rainbow = {

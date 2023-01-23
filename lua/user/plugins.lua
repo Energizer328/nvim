@@ -51,7 +51,6 @@ return packer.startup(function(use)
   use "saadparwaiz1/cmp_luasnip" -- completion source for snippets
   use "hrsh7th/cmp-nvim-lsp" -- completion source for lsp
   use "hrsh7th/cmp-nvim-lua" -- completion source for nvim-lua files
-
   -- Snippets
   use "L3MON4D3/LuaSnip" -- snippet engine
   use "rafamadriz/friendly-snippets" -- some snippets
@@ -70,7 +69,7 @@ return packer.startup(function(use)
     'nvim-treesitter/nvim-treesitter',
     run = ":TSUpdate",
   }
-  use 'p00f/nvim-ts-rainbow'
+  --use 'p00f/nvim-ts-rainbow'
 
   -- Autopairs
   use "windwp/nvim-autopairs"
@@ -85,7 +84,7 @@ return packer.startup(function(use)
   use "nvim-lualine/lualine.nvim"
 
   -- File explorer
-  use {"kyazdani42/nvim-tree.lua", tag = "nightly"}
+  use { "kyazdani42/nvim-tree.lua", tag = "nightly" }
 
   -- Comments
   use "numToStr/Comment.nvim"
@@ -95,6 +94,13 @@ return packer.startup(function(use)
 
   -- Flutter
   use "akinsho/flutter-tools.nvim"
+
+  -- Golang
+  use 'ray-x/go.nvim'
+  use 'ray-x/guihua.lua'
+
+  -- Git blame
+  use 'APZelos/blamer.nvim'
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()

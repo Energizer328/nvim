@@ -15,3 +15,4 @@ mason_lspconfig.setup()
 require "user.lsp.settings.lua"
 require "user.lsp.settings.rust"
 require "user.lsp.settings.flutter"
+require "user.lsp.settings.golang"
