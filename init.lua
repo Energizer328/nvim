@@ -1,4 +1,3 @@
-
 require "user.options"
 require "user.plugins"
 require "user.colorscheme"
@@ -11,4 +10,7 @@ require "user.lualine"
 require "user.nvim_tree"
 require "user.comment"
 require "user.keymaps"
-
+require "user.blamer"
+require "user.surround"
+require "user.gitsigns"
+require "user.lsp_signature"

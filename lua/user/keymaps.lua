@@ -5,7 +5,7 @@ local term_opts = { silent = true }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
---Remap space as leader key
+-- Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
@@ -25,6 +25,8 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+keymap("n", "J", "o<ESC>^d$", opts)
+keymap("n", "K", "O<ESC>^d$", opts)
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 -- Resize with arrows
@@ -32,13 +34,6 @@ keymap("n", "<C-Up>", ":resize +2<CR>", opts)
 keymap("n", "<C-Down>", ":resize -2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
-
--- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
-
--- Mason.vim
-keymap("n", "<leader>li", ":Mason<CR>", opts)
 
 -- Insert --
 -- Press jk fast to enter
@@ -54,20 +49,20 @@ keymap("v", "<A-j>", ":m .+1<CR>==", opts)
 keymap("v", "<A-k>", ":m .-2<CR>==", opts)
 keymap("v", "p", '"_dP', opts)
 
--- Visual Block --
--- Move text up and down
-keymap("x", "J", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
-keymap("x", "<A-j>", ":move '>+1<CR>gv-gv", opts)
-keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
-
 -- Telescope actions --
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>fl", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 keymap("n", "<leader>fc", ":Telescope commands<CR>", opts)
-keymap("n", "<leader>gr", ":Telescope lsp_references<CR>", opts)
-keymap("n", "<leader>gd", ":Telescope lsp_definitions<CR>", opts)
-keymap("n", "<leader>gi", ":Telescope lsp_implementations<CR>", opts)
-keymap("n", "<leader>gt", ":Telescope lsp_type_definitions<CR>", opts)
+keymap("n", "<leader>fd", ":Telescope diagnostic<CR>", opts)
 
+-- LSP --
+keymap("n", "<leader>lr", ":Telescope lsp_references<CR>", opts)
+keymap("n", "<leader>gd", ":Telescope lsp_definitions<CR>", opts)
+keymap("n", "<leader>li", ":Telescope lsp_implementations<CR>", opts)
+keymap("n", "<leader>lt", ":Telescope lsp_type_definitions<CR>", opts)
+keymap("n", "<leader>ldn", "vim.diagnostic.goto_next", opts)
+keymap("n", "<leader>ldp", "vim.diagnostic.goto_prev", opts)
+
+-- NVim config files --
+keymap("n", "<leader>vc", ":Telescope find_files search_dirs={'~/.config/nvim'}<CR>", opts)

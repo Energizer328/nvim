@@ -1,4 +1,3 @@
-
 local ok, cmp = pcall(require, "cmp")
 if not ok then
   vim.notify("could not load package cmp")
@@ -10,6 +9,7 @@ if not ok then
   vim.notify("could not load package luasnip")
 end
 
+luasnip.filetype_extend("dart", { "flutter" })
 require("luasnip.loaders.from_vscode").lazy_load()
 
 local kind_icons = {

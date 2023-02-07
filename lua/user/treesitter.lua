@@ -4,7 +4,16 @@ if not ok then
 end
 
 config.setup {
-  ensure_installed = { "lua", "dart", "go", "terraform" }, -- list of parsers to install, or "all"
+  ensure_installed = {
+    "bash",
+    "dart",
+    "go",
+    "lua",
+    "proto",
+    "python",
+    "terraform",
+    "yaml",
+  }, -- list of parsers to install, or "all"
   sync_installed = false, -- install parsers synchronously
   auto_install = true, -- automatically install missing parsers when entering buffer
   ignore_install = {}, -- list of parsers to ignore installing
