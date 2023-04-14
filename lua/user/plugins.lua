@@ -45,26 +45,26 @@ return packer.startup(function(use)
 	use "folke/tokyonight.nvim"
 
 	-- Completion
-	use "hrsh7th/nvim-cmp" -- completion engine
-	use "hrsh7th/cmp-buffer" -- completion source from buffer
-	use "hrsh7th/cmp-path" -- completion source from paths
+	use "hrsh7th/nvim-cmp"        -- completion engine
+	use "hrsh7th/cmp-buffer"      -- completion source from buffer
+	use "hrsh7th/cmp-path"        -- completion source from paths
 	use "saadparwaiz1/cmp_luasnip" -- completion source for snippets
-	use "hrsh7th/cmp-nvim-lsp" -- completion source for lsp
-	use "hrsh7th/cmp-nvim-lua" -- completion source for nvim-lua files
+	use "hrsh7th/cmp-nvim-lsp"    -- completion source for lsp
+	use "hrsh7th/cmp-nvim-lua"    -- completion source for nvim-lua files
 	use "ray-x/lsp_signature.nvim" -- show function parameters hint
 
 	-- Snippets
-	use "L3MON4D3/LuaSnip" -- snippet engine
+	use "L3MON4D3/LuaSnip"            -- snippet engine
 	use "rafamadriz/friendly-snippets" -- some snippets
 
 	-- LSPs
-	use "williamboman/mason.nvim" -- simple to use language server installer
+	use "williamboman/mason.nvim"          -- simple to use language server installer
 	use "williamboman/mason-lspconfig.nvim" -- recommended by mason.nvim
-	use "neovim/nvim-lspconfig" -- enable LSP
-	use "simrat39/rust-tools.nvim" -- setup rust analyzer
-	use 'mfussenegger/nvim-dap' -- debug adapter protocol client (recommended by mason.nvim)
-	use 'mfussenegger/nvim-lint' -- asynchronous linter (recommended by mason.nvim)
-	use 'mhartington/formatter.nvim' -- asynchronous formatter (recommended by mason.nvim)
+	use "neovim/nvim-lspconfig"            -- enable LSP
+	use "simrat39/rust-tools.nvim"         -- setup rust analyzer
+	use 'mfussenegger/nvim-dap'            -- debug adapter protocol client (recommended by mason.nvim)
+	use 'mfussenegger/nvim-lint'           -- asynchronous linter (recommended by mason.nvim)
+	use 'mhartington/formatter.nvim'       -- asynchronous formatter (recommended by mason.nvim)
 
 	-- Treesitter
 	use {
@@ -101,16 +101,15 @@ return packer.startup(function(use)
 	use 'ray-x/go.nvim'
 	use 'ray-x/guihua.lua'
 
-	-- Git blame
+	-- Git
 	use 'APZelos/blamer.nvim'
+	use "lewis6991/gitsigns.nvim"
 
 	-- Surround
 	use {
 		"kylechui/nvim-surround",
 		tag = "*",
 	}
-
-	use "lewis6991/gitsigns.nvim"
 
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()

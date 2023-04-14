@@ -4,7 +4,7 @@ if not ok then
 	return
 end
 
-require("lspconfig").sumneko_lua.setup {
+require("lspconfig").lua_ls.setup {
 	on_attach = commons.on_attach,
 	flags = commons.lsp_flags,
 	settings = {

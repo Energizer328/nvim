@@ -54,15 +54,21 @@ keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>fl", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 keymap("n", "<leader>fc", ":Telescope commands<CR>", opts)
-keymap("n", "<leader>fd", ":Telescope diagnostic<CR>", opts)
 
 -- LSP --
 keymap("n", "<leader>lr", ":Telescope lsp_references<CR>", opts)
 keymap("n", "<leader>gd", ":Telescope lsp_definitions<CR>", opts)
 keymap("n", "<leader>li", ":Telescope lsp_implementations<CR>", opts)
 keymap("n", "<leader>lt", ":Telescope lsp_type_definitions<CR>", opts)
-keymap("n", "<leader>ldn", "vim.diagnostic.goto_next", opts)
-keymap("n", "<leader>ldp", "vim.diagnostic.goto_prev", opts)
+
+-- Diagnostics --
+keymap("n", "<leader>ds", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+keymap("n", "<leader>dn", "<cmd>lua vim.diagnostic.goto_next()<CR>", opts)
+keymap("n", "<leader>dp", "<cmd>lua vim.diagnostic.goto_prev()<CR>", opts)
+keymap("n", "<leader>dl", "<cmd>Telescope diagnostics<CR>", opts)
 
 -- NVim config files --
 keymap("n", "<leader>vc", ":Telescope find_files search_dirs={'~/.config/nvim'}<CR>", opts)
+
+-- Clear search highlights --
+keymap("n", "<c-/>", ":noh<CR>", opts)
