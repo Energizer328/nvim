@@ -7,6 +7,7 @@ config.setup {
 	defaults = {
 		-- Default configuration for telescope goes here:
 		-- config_key = value,
+		path_display = { "smart" },
 		mappings = {
 			i = {
 				-- map actions.which_key to <C-h> (default: <C-/>)
@@ -14,10 +15,8 @@ config.setup {
 				-- e.g. git_{create, delete, ...}_branch for the git_branches picker
 				["<C-j>"] = "move_selection_next",
 				["<C-k>"] = "move_selection_previous",
-
 				["<A-j>"] = "preview_scrolling_down",
 				["<A-k>"] = "preview_scrolling_up",
-
 				["<CR>"] = "select_default",
 				["<C-v>"] = "select_vertical",
 				["<C-t>"] = "select_tab",
