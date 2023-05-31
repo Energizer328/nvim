@@ -9,7 +9,9 @@ require 'lspconfig'.gopls.setup {
 	flags = commons.lsp_flags,
 	settings = {
 		gopls = {
-			buildFlags = { "-tags=iot" },
+			buildFlags = {
+				"-tags=iot",
+			},
 		}
 	},
 }

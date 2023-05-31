@@ -7,7 +7,7 @@ config.setup {
 	defaults = {
 		-- Default configuration for telescope goes here:
 		-- config_key = value,
-		path_display = { "smart" },
+		-- path_display = { "smart" },
 		mappings = {
 			i = {
 				-- map actions.which_key to <C-h> (default: <C-/>)
@@ -18,9 +18,9 @@ config.setup {
 				["<A-j>"] = "preview_scrolling_down",
 				["<A-k>"] = "preview_scrolling_up",
 				["<CR>"] = "select_default",
-				["<C-v>"] = "select_vertical",
+				['<C-v>'] = "select_vertical",
 				["<C-t>"] = "select_tab",
-				["<C-h>"] = "select_horizontal",
+				["<C-x>"] = "select_horizontal",
 			},
 			n = {
 				["q"] = "close",

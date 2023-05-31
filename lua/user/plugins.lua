@@ -2,6 +2,7 @@ local install_path = vim.fn.stdpath "data" .. "/site/pack/packer/start/packer.nv
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 	PACKER_BOOTSTRAP = vim.fn.system {
 		"git",
+
 		"clone",
 		"--depth",
 		"1",
@@ -43,6 +44,7 @@ return packer.startup(function(use)
 	-- Colorschemes
 	use "cpea2506/one_monokai.nvim"
 	use "folke/tokyonight.nvim"
+	use { "catppuccin/nvim", as = "catppuccin" }
 
 	-- Completion
 	use "hrsh7th/nvim-cmp"        -- completion engine
@@ -109,6 +111,19 @@ return packer.startup(function(use)
 	use {
 		"kylechui/nvim-surround",
 		tag = "*",
+	}
+
+	-- Integrated navigation with tmux
+	use {
+		"christoomey/vim-tmux-navigator",
+		lazy = false,
+	}
+
+	-- Neorg
+	use {
+		"nvim-neorg/neorg",
+		run = ":Neorg sync-parsers",
+		requires = "nvim-lua/plenary.nvim",
 	}
 
 	if PACKER_BOOTSTRAP then

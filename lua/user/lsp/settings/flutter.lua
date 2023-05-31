@@ -4,7 +4,7 @@ if not ok then
 	return
 end
 
-vim.notify(vim.loop.cwd())
+-- vim.notify(vim.loop.cwd())
 
 -- require("lspconfig").dartls.setup {
 -- 	on_attach = commons.on_attach,
