@@ -71,4 +71,8 @@ keymap("n", "<leader>dl", "<cmd>Telescope diagnostics<CR>", opts)
 keymap("n", "<leader>vc", ":Telescope find_files search_dirs={'~/.config/nvim'}<CR>", opts)
 
 -- Clear search highlights --
-keymap("n", "<c-/>", ":noh<CR>", opts)
+keymap("n", "<leader>sc", ":noh<CR>", opts)
+
+-- Neorg bindings --
+keymap("n", "<leader>oi", "<cmd>Neorg index<CR>", opts)
+keymap("n", "<leader>or", "<cmd>Neorg return<CR>", opts)

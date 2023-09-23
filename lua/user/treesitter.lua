@@ -13,7 +13,7 @@ config.setup {
 		"python",
 		"terraform",
 		"yaml",
-		"org",
+		"norg",
 	},                     -- list of parsers to install, or "all"
 	sync_installed = false, -- install parsers synchronously
 	auto_install = true,   -- automatically install missing parsers when entering buffer
