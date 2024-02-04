@@ -57,7 +57,7 @@ cmp.setup({
 		["<A-j>"] = cmp.mapping.select_next_item(),
 		["<A-k>"] = cmp.mapping.select_prev_item(),
 		["<CR>"] = cmp.mapping.confirm({ select = true }),
-		["<c-space>"] = cmp.mapping.complete(),
+		["<A-o>"] = cmp.mapping.complete(),
 		["<A-n>"] = cmp.mapping(function(fallback) luasnip.jump(1) end),
 	}),
 	formatting = {

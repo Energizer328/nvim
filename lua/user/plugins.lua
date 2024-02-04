@@ -126,6 +126,8 @@ return packer.startup(function(use)
 		requires = "nvim-lua/plenary.nvim",
 	}
 
+	use 'ggandor/leap.nvim'
+
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
 	end

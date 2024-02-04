@@ -75,4 +75,7 @@ keymap("n", "<leader>sc", ":noh<CR>", opts)
 
 -- Neorg bindings --
 keymap("n", "<leader>oi", "<cmd>Neorg index<CR>", opts)
+keymap("n", "<leader>oo", "<cmd>e /home/pedrofilipe/notes/work/todos.norg<CR>", opts)
 keymap("n", "<leader>or", "<cmd>Neorg return<CR>", opts)
+
+require('leap').add_default_mappings()
