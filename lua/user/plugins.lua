@@ -97,7 +97,13 @@ return packer.startup(function(use)
 	use "rust-lang/rust.vim"
 
 	-- Flutter
-	use "akinsho/flutter-tools.nvim"
+	use {
+		"akinsho/flutter-tools.nvim",
+		requires = {
+			'nvim-lua/plenary.nvim',
+			'stevearc/dressing.nvim', -- optional for vim.ui.select
+		},
+	}
 
 	-- Golang
 	use 'ray-x/go.nvim'

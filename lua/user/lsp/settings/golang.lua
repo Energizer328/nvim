@@ -10,7 +10,7 @@ require 'lspconfig'.gopls.setup {
 	settings = {
 		gopls = {
 			buildFlags = {
-				"-tags=iot",
+				"-tags=iot smoketest regressiontest",
 			},
 		}
 	},
