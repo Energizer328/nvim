@@ -54,11 +54,11 @@ cmp.setup({
 		documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
-		["<A-j>"] = cmp.mapping.select_next_item(),
-		["<A-k>"] = cmp.mapping.select_prev_item(),
+		["<Tab>"] = cmp.mapping.select_next_item(),
+		-- ["<A-k>"] = cmp.mapping.select_prev_item(),
 		["<CR>"] = cmp.mapping.confirm({ select = true }),
-		["<A-o>"] = cmp.mapping.complete(),
-		["<A-n>"] = cmp.mapping(function(fallback) luasnip.jump(1) end),
+		-- ["<A-o>"] = cmp.mapping.complete(),
+		-- ["<A-n>"] = cmp.mapping(function(fallback) luasnip.jump(1) end),
 	}),
 	formatting = {
 		fields = { "kind", "abbr", "menu" },
