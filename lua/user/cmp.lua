@@ -54,8 +54,8 @@ cmp.setup({
 		documentation = cmp.config.window.bordered(),
 	},
 	mapping = cmp.mapping.preset.insert({
-		["<Tab>"] = cmp.mapping.select_next_item(),
-		-- ["<A-k>"] = cmp.mapping.select_prev_item(),
+		["∆"] = cmp.mapping.select_next_item(),
+		["˚"] = cmp.mapping.select_prev_item(),
 		["<CR>"] = cmp.mapping.confirm({ select = true }),
 		-- ["<A-o>"] = cmp.mapping.complete(),
 		-- ["<A-n>"] = cmp.mapping(function(fallback) luasnip.jump(1) end),
