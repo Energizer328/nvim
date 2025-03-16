@@ -88,7 +88,7 @@ return packer.startup(function(use)
 	use "nvim-lualine/lualine.nvim"
 
 	-- File explorer
-	use { "kyazdani42/nvim-tree.lua", tag = "nightly" }
+	use { "nvim-tree/nvim-tree.lua" }
 
 	-- Comments
 	use "numToStr/Comment.nvim"
